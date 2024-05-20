@@ -1,0 +1,63 @@
+<style>
+ .error-container {
+            background-color: #00000091;
+            border: 1px solid #f5c800;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .error-message {
+            color: #f5c800;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0;
+        }
+</style>
+<%- include('partials/header.ejs'); -%>
+
+    <!-- book section -->
+    <section class="book_section layout_padding">
+        <div class="container text-center">
+            <div class="heading_container">
+                <h2>Disfruta de Nuestra Gastronomia!!!</h2>
+
+                <% if (error) { %>
+                <div class="error-container text-center">
+                        <p class="error-message"><%= error %></p>
+                </div>
+                <% } %>
+
+            </div>
+            
+        </div>
+
+        <div class="container">
+            <div class="col-md-6 mx-auto">
+                <div class="form_container">
+                    <form action="/login" method="POST">
+                        <div>
+                            <input type="email" name="email" class="form-control" placeholder="Ingresa un email"
+                                required />
+                        </div>
+                        <div>
+                            <input type="password" name="password1" class="form-control"
+                                placeholder="Ingresa una contraseña" required />
+                        </div>
+                        <div class="btn_box">
+                            <button type="submit">Login</button>
+                        </div>
+
+                        
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end book section -->
+    <%- include('partials/footer.ejs'); -%>

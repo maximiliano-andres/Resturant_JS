@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs'); -%>
+
+<link rel="stylesheet" href="css/perfil.css">
+    <!-- Estilos en un archivo externo -->
+    <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+        <div class="card p-4">
+            <div class=" image d-flex flex-column justify-content-center align-items-center"> <button
+                    class="btn btn-secondary"> <img src="img/logo.png" height="100"
+                        width="100" /></button> <span class="name mt-3 titulo"><%= user.usuario %></span> <span
+                    class="idd text" >@ <%= user.email %></span>
+                
+                
+                    <div class="d-flex mt-2 text-center">
+                        <a href="/perfil/<%= user.id %>/formulario" class="btn1 btn-dark">Edit Profile</a>
+                    </div>
+                <div class="text mt-3"> <span>Nombre: <%= nombre %> </span> </div>
+                <div class="text mt-3"> <span>Telefono: <%= telefono %></span> </div>
+                <div class="text mt-3"> <span>Direccion: <%= direccion %></span> </div>
+                
+                <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i
+            
+                <div class=" px-2 rounded mt-4 date "> <span class="join">Joined May,2021</span> </div>
+            </div>
+        </div>
+    </div>
+    
+<%- include('partials/footer.ejs'); -%>

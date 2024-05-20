@@ -1,0 +1,292 @@
+<%- include('partials/header.ejs'); -%>
+  <!-- slider section -->
+  <section class="slider_section ">
+    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class=" ">
+            <div class="row">
+              <div class="col-md-7 col-lg-6 mx-auto">
+                <div class="detail-box">
+                  <% if (!user){ %>
+                    <h1>
+                      Bienvenidos al Restaurat de Frijolito!!!
+                    </h1>
+                    <% } else { %>
+                      <h1>
+                        <%= user.usuario %>
+                      </h1>
+                      <% } %>
+                        <p>
+                          En el Restaurante de Frijolito, te invitamos a disfrutar de una experiencia gastronómica
+                          única.
+                          Nuestro compromiso es ofrecerte platillos cuidadosamente preparados con los mejores
+                          ingredientes, en
+                          un ambiente acogedor y familiar. ¡Ven y déjate deleitar por nuestros sabores!
+                        </p>
+                        <div class="btn-box">
+                          <a href="" class="btn1">
+                            Order Now
+                          </a>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <div class="">
+            <div class="row">
+              <div class="col-md-7 col-lg-6 mx-auto">
+                <div class="detail-box">
+                  <h1>
+                    Sabor auténtico, experiencia inolvidable.
+                  </h1>
+                  <p>
+                    Descubre el auténtico sabor de la cocina tradicional en el Restaurante de Frijolito. Nuestros
+                    platillos están cuidadosamente preparados para ofrecerte una experiencia gastronómica inolvidable.
+                    ¡Ven y disfruta de la mejor comida en un ambiente familiar y acogedor!
+                  </p>
+                  <div class="btn-box">
+                    <a href="" class="btn1">
+                      Order Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class=" ">
+            <div class="row">
+              <div class="col-md-7 col-lg-6 mx-auto">
+                <div class="detail-box">
+                  <h1>
+                    Donde cada bocado es una fiesta para tus sentidos.
+                  </h1>
+                  <p>
+                    En el Restaurante de Frijolito, cada platillo es una celebración de sabores, aromas y texturas.
+                    Déjate llevar por nuestra cocina creativa y deléitate con cada bocado. ¡Visítanos y vive una
+                    experiencia gastronómica que despertará todos tus sentidos!
+                  </p>
+                  <div class="btn-box">
+                    <a href="" class="btn1">
+                      Order Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#customCarousel1" data-slide-to="1"></li>
+          <li data-target="#customCarousel1" data-slide-to="2"></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  </div>
+  <section class="food_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Menú
+        </h2>
+      </div>
+      <div class="filters-content">
+        <div class="row grid">
+          <a href="/todo" class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="./img/menu_completo.jpg" alt="menu">
+                </div>
+                <div class="detail-box">
+                  <h5>TODO NUESTRO MENÚ</h5>
+                  <p>
+                    Sumérgete en un festín de sabores con nuestro menú completo. Diseñado para llevarte en un viaje
+                    culinario, cada plato está preparado para ofrecerte una experiencia gastronómica única y memorable.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="/entradas" class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="./img/ensalada.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    SOLO ENTRADAS
+                  </h5>
+                  <p>
+                    Descubre el inicio perfecto para tu experiencia gastronómica. Nuestras entradas son un preludio de
+                    sabores. Desde clásicos hasta creaciones audaces, cada plato te
+                    sorprenderá
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="/plato_principal" class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="./img/plato_principal.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    SOLO PLATOS PRINCIPALES
+                  </h5>
+                  <p>
+                    Nuestros platillos principales son el corazón de nuestra cocina. Preparados con pasión y cuidado,
+                    cada bocado es una obra maestra de sabores auténticos. Desde lo tradicional hasta lo innovador, cada
+                    plato enamora.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="/acompanamientos" class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="./img/papafritas.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    SOLO ACOMPAÑAMIENTOS
+                  </h5>
+                  <p>
+                    Nuestros acompañamientos complementan a la perfección cada platillo. Desde opciones clásicas hasta
+                    combinaciones sorprendentes, añaden una dimensión adicional de sabor y textura a tu experiencia
+                    culinaria.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="/bebidas" class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="./img/bebidas.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    SOLO BEBIDAS
+                  </h5>
+                  <p>
+                    Complementa tu experiencia con nuestra selección de bebidas. Desde vinos seleccionados hasta
+                    refrescos y cócteles, cada sorbo realza los sabores de nuestra cocina y añade una dimensión
+                    refrescante a tu comida
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="/postres" class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="./img/postres.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    SOLO POSTRES
+                  </h5>
+                  <p>
+                    Finaliza con nuestros irresistibles postres, creados para satisfacer. Desde clásicos reconfortantes
+                    hasta creaciones sorprendentes, cada postre es una celebración de sabores y texturas que te dejará
+                    con ganas de más.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="img/logo.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 text-center">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Restaurant Frijolito
+              </h2>
+            </div>
+            <p>
+              Bienvenido al paraíso gastronómico de Frijolito! Sumérgete en un mundo de sabores auténticos y texturas
+              exquisitas que harán vibrar tus sentidos.<br> En nuestro restaurante, cada platillo es una obra maestra
+              culinaria, preparada con pasión y dedicación para ofrecerte una experiencia única e inolvidable. Ven y
+              descubre por qué somos el destino preferido de los amantes de la buena comida.<br> ¡Tu paladar nos lo
+              agradecerá!
+            </p>
+            <a href="/about">
+              Saber más...
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <% if (!user) { %>
+
+    <section class="book_section layout_padding">
+      <div class="container text-center">
+        <div class="heading_container">
+          <h2>Registrate para disfrutar de Nuestra Gastronomia!!!</h2>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="about_section layout_padding">
+      <div class="container  ">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>
+                  Registrate Aqui
+                </h2>
+              </div>
+              <a href="/registrar_usuario">
+                Registrar
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 ">
+            <div class="img-box">
+              <img src="img/logo.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <% } %>
+      <!-- end client section -->
+      <%- include('partials/footer.ejs'); -%>

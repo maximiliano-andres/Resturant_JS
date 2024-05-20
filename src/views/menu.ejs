@@ -1,0 +1,100 @@
+
+
+  <!-- food section -->
+
+  <%- include('partials/header.ejs'); -%>
+
+  <section class="food_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <% if (user) { %>
+
+          <h2>
+            <%= user %>
+          </h2>
+
+          <% } %>
+            <h2>Conoce Nuestro Restaurant</h2>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end food section -->
+
+  <!-- portfolio_image_area  -->
+  <div class="portfolio_image_area dec_margin">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-5 col-md-5">
+          <div class="single_Portfolio">
+            <div class="portfolio_thumb">
+              <img src="./img/papafritas.jpg" alt="">
+            </div>
+            <a href="./img/papafritas.jpg" class="popup popup-image"></a>
+            <div class="portfolio_hover">
+              <div class="title">
+                <h3>Papas fritas</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-7 col-md-7">
+          <div class="single_Portfolio">
+            <div class="portfolio_thumb">
+              <img src="./img/ensalada.jpg" alt="">
+            </div>
+            <a href="./img/ensalada.jpg" class="popup popup-image"></a>
+            <div class="portfolio_hover">
+              <div class="title">
+                <h3>Ensalada</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-lg-4">
+          <div class="single_Portfolio">
+            <div class="portfolio_thumb">
+              <img src="./img/restaurant/prueba_1.jpg" alt="">
+            </div>
+            <a href="./img/restaurant/prueba_1.jpg" class="popup popup-image"></a>
+            <div class="portfolio_hover">
+              <div class="title">
+                <h3>Fideos</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-lg-4">
+          <div class="single_Portfolio">
+            <div class="portfolio_thumb">
+              <img src="./img/restaurant/prueba_2.jpg" alt="">
+            </div>
+            <a href="./img/restaurant/prueba_2.jpg" class="popup popup-image"></a>
+            <div class="portfolio_hover">
+              <div class="title">
+                <h3>Local</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-12 col-lg-4">
+          <div class="single_Portfolio">
+            <div class="portfolio_thumb">
+              <img src="./img/restaurant/prueba_1.jpg" alt="">
+            </div>
+            <a href="./img/restaurant/prueba_1.jpg" class="popup popup-image"></a>
+            <div class="portfolio_hover">
+              <div class="title">
+                <h3>Me da flojera seguir</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <<%- include('partials/footer.ejs'); -%>

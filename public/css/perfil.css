@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.titulo {
+    color: goldenrod;
+}
+
+.card {
+    width: 6000px; /* Aumenta el ancho de la tarjeta */
+    max-width: 100%; /* Asegura que la tarjeta no sea más ancha que la pantalla */
+    background-color: #0000008c;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.image img {
+    transition: all 0.5s
+}
+
+.card:hover .image img {
+    transform: scale(1.5)
+}
+
+.btn {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%
+}
+
+.name {
+    font-size: 40px;
+    font-weight: bold
+}
+
+.idd {
+    font-size: 14px;
+    font-weight: 600
+}
+
+.idd1 {
+    font-size: 12px
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold
+}
+
+
+
+.btn1 {
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    background-color:rgba(218, 165, 32, 0.849);
+    color: #ffffff;
+    font-size: 15px
+}
+.text{
+    color: #ffffff;
+    font-size: 20px;
+}
+.text span {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 500
+}
+
+hr .new1 {
+    border: 1px solid
+}
+
+.join {
+    font-size: 14px;
+    color:goldenrod;
+    font-weight: bold
+}
+
+.date {
+    background-color: #000000;
+    border-radius: 20px;
+}

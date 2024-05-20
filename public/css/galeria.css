@@ -1,0 +1,121 @@
+/* line 25, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area {
+    padding-bottom: 75px;
+    position: relative;
+    margin-top: -295px;
+}
+
+/* line 29, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area.dec_margin {
+    margin-top: 0;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+@media (max-width: 767px) {
+
+    /* line 29, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+    .portfolio_image_area.dec_margin {
+        padding: 50px 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* line 29, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+    .portfolio_image_area.dec_margin {
+        padding: 70px 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    /* line 29, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+    .portfolio_image_area.dec_margin {
+        padding: 100px 0;
+    }
+}
+
+/* line 43, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area .single_Portfolio {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* line 47, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area .single_Portfolio .portfolio_thumb {
+    height: 410px;
+}
+
+/* line 49, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area .single_Portfolio .portfolio_thumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px; /* Ajusta el valor según el radio de redondeo que desees */
+}
+/* line 54, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area .single_Portfolio .portfolio_hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background:rgba(218, 165, 32, 0.616);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    opacity: 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* line 66, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area .single_Portfolio .portfolio_hover .title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* line 74, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area .single_Portfolio .portfolio_hover h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* line 80, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area .single_Portfolio:hover .portfolio_hover {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+/* line 85, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area .more_portfolio {
+    margin-top: 60px;
+}
+
+/* line 88, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_portfolio.scss */
+.portfolio_image_area .popup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
