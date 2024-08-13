@@ -3,9 +3,9 @@
 [![Node.js](https://img.shields.io/badge/Node.js-v14.17.0-green)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-v4.17.1-blue)](https://expressjs.com/)
 [![EJS](https://img.shields.io/badge/EJS-v3.1.6-yellow)](https://ejs.co/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-brightgreen)](https://www.mongodb.com/cloud/atlas)
+[![MySQL](https://img.shields.io/badge/MySQL-v8.0.26-orange)](https://www.mysql.com/)
 
-¡Bienvenido mi **Proyecto Restaurante**! Esta es una aplicación web completa diseñada para gestionar todas las operaciones de un restaurante, desde la administración del menú hasta la gestión de reservas, todo dentro de una interfaz dinámica y amigable para el usuario.
+¡Bienvenido al repositorio del **Proyecto Restaurante**! Esta es una aplicación web completa diseñada para gestionar todas las operaciones de un restaurante, desde la administración del menú hasta la gestión de reservas, todo dentro de una interfaz dinámica y amigable para el usuario.
 
 ## 📸 Vista Previa
 
@@ -27,7 +27,7 @@ El **Proyecto Restaurante** es una solución moderna y eficiente para la gestió
 
 - **Backend**: [Node.js](https://nodejs.org/), [Express](https://expressjs.com/)
 - **Frontend**: [EJS](https://ejs.co/), [Bootstrap](https://getbootstrap.com/)
-- **Base de Datos**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+- **Base de Datos**: [MySQL](https://www.mysql.com/)
 - **Control de Versiones**: [Git](https://git-scm.com/)
 
 ## 🚀 Instalación y Configuración
