@@ -14,7 +14,7 @@ import router from "./v1/routes/rutas.js";
 import authRoutes from "./v1/routes/auth.routes.js";
 
 // mensaje en cualquier consola del servido
-const DEBUG = debug('app:Servidor');
+const DEBUG = debug('index:Servidor');
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 //console.log("URL: " +  __dirname);
