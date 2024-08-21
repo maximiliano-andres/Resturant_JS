@@ -30,10 +30,3 @@ El **Proyecto Restaurante** es una solución moderna y eficiente para la gestió
 - **Base de Datos**: [MySQL](https://www.mysql.com/)
 - **Control de Versiones**: [Git](https://git-scm.com/)
 
-## 🚀 Instalación y Configuración
-
-Sigue estos pasos para poner en marcha el proyecto en tu entorno local:
-
-1. **Clona el repositorio:**
-   ```bash
-   git clone https://github.com/maximiliano-andres/restaurant-project.git
