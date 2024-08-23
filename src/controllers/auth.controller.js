@@ -32,23 +32,25 @@ const Registrar_Usuario = async (req, res) => {
             // Validación de nombre de usuario
             if (!usuario || usuario.length < 3) {
                 console.log("------NOMBRE DE USUARIO NO VALIDO---------");
-                res.render('Login', { error: 'El nombre de usuario debe tener al menos 3 caracteres' });
-                return;
+                
+                const error = 'El nombre de usuario debe tener al menos 3 caracteres'
+                return res.status(200).redirect("/registrar_usuario?error=" + encodeURIComponent(error));
             }
 
             //VALIDACION DE EMAIL
             if (!SignoRequeridosEmail.test(email)) {
                 console.log("------EMAIL NO ES VALIDO---------");
-                res.render('Login', { error: 'El email proporcionado no es válido' });
-                return;
+                const error = 'El email proporcionado no es válido';
+                return res.status(200).redirect("/registrar_usuario?error=" + encodeURIComponent(error));
             }
 
             // Validación de contraseña
             const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
             if (!passwordRegex.test(password1)) {
                 console.log("------CONTRASEÑA NO ES VALIDA---------");
-                res.render('crear-cuenta.ejs', { error: 'La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula, un número y un carácter especial' });
-                return;
+                const error = 'La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula, un número y un carácter especial'
+                return res.status(200).redirect("/registrar_usuario?error=" + encodeURIComponent(error));
+                
             }
             //------------------------Encriptacion----------------------------------
 
