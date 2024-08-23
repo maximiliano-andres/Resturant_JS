@@ -10,23 +10,23 @@ const router = Router();
 //rutas atraves de controladores
 
 //BASE DE DATOS
-router.get("/todo",token.authJWT,ctr.ver_todos_productos);
-router.get("/bebidas",token.authJWT,ctr.ver_bebidas);
-router.get("/acompanamientos",token.authJWT,ctr.ver_acompañamientos);
-router.get("/plato_principal",token.authJWT,ctr.ver_plato_principal)
-router.get("/entradas",token.authJWT, ctr.ver_entradas);
-router.get("/postres",token.authJWT,ctr.ver_postres);
+router.get("/todo",token.validadorTOKEN,ctr.ver_todos_productos);
+router.get("/bebidas",token.validadorTOKEN,ctr.ver_bebidas);
+router.get("/acompanamientos",token.validadorTOKEN,ctr.ver_acompañamientos);
+router.get("/plato_principal",token.validadorTOKEN,ctr.ver_plato_principal)
+router.get("/entradas",token.validadorTOKEN, ctr.ver_entradas);
+router.get("/postres",token.validadorTOKEN,ctr.ver_postres);
 
 //PAGINA WEB
-router.get("/home",token.authJWT, principal.home);
-router.get("/menu",token.authTOKEN,principal.menu);
+router.get("/home",token.validadorTOKEN, principal.home);
+router.get("/menu",token.validadorTOKEN,principal.menu);
 router.get("/login", principal.login);
 router.get("/registrar_usuario",principal.registrarme);
-router.get("/about",token.authJWT, principal.about);
+router.get("/about",token.validadorTOKEN, principal.about);
 
 
 //RESTAURANT
-router.get("/mesa_orden", token.authJWT,restaurant.mesas_disponibles)
+router.get("/mesa_orden", token.validadorTOKEN,restaurant.mesas_disponibles)
 router.post("/mesa_orden", restaurant.Seleccion_mesa);
 
 

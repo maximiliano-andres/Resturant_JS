@@ -5,8 +5,8 @@ const home = (req, res) => {
 
 const menu = (req, res) => {
     const user = req.user;// Obtener el usuario autenticado
-    //console.log(user.usuario)
-    res.render("menu", { user: user.usuario }); //envia el nombre del usuario a menu
+    console.log(user)
+    res.render("menu", { user}); //envia el nombre del usuario a menu
 };
 
 const login = (req, res) => {

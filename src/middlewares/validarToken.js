@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+/*import jwt from 'jsonwebtoken';
 import { config } from 'dotenv';
 import env from "env-var";
 
@@ -83,40 +83,65 @@ export default {
     authJWT,
     authorizeUser
 };
+*/
+import jwt from 'jsonwebtoken';
+import { config } from 'dotenv';
+import env from "env-var";
 
 
 
+config();
 
-/*
-const authTOKEN = (req, res, next) => {
+// TOKEN QUE VERIFICA QUE EL USUARIO TENGA UN TOKEN VALIDO
+const validadorTOKEN = async (req, res, next) => {
     try {
         const { token } = req.cookies;
-        if (token) {
-            const decoded = jwt.verify(token, env.get("maximiliano").required().asString()));
-            req.user = decoded;
-        }
-        // Lista de rutas públicas
-        const publicPages = ['/home', '/about'];
+        //mensaje(token)
 
-        // Verificar si la ruta solicitada es una página pública
-        if (publicPages.includes(req.path)) {
-            // Permitir el acceso a la página pública sin redirigir
-            next();
-        } else {
-            // Redirigir a la página de inicio de sesión si el token está presente pero es inválido
-            if (!token) {
-                return res.redirect('/login?error=Inicia%20sesión%20para%20acceder%20a%20las%20funcionalidades');
-            }
-            // Permitir el acceso a las páginas protegidas por el token
-            next();
+        if (!token) {
+            res.locals.user = null;
+            console.log("NO HAY UN TOKEN VALIDO")
+            return next();
         }
+
+        const secretKey = env.get("maximiliano").required().asString();
+        //console.log(secretKey)
+
+        jwt.verify(token, secretKey, (err, decoded) => {
+            if (err) {
+                res.locals.user = null;
+                res.cookie("token", "", {
+                    expires: new Date(0),
+                    httpOnly: true,
+                    secure: process.env.NODE_ENV === 'production',
+                    sameSite: 'strict'
+                });
+                return res.redirect('/login');
+                
+            }
+
+            req.userId = decoded.id;
+            req.user = decoded;
+            res.locals.user = decoded;
+            
+            next();
+        });
     } catch (error) {
-        console.error(error);
-        // Redirigir a la página de inicio de sesión si el token está presente pero es inválido
+        console.error(`Error en el middleware de autorización: ${error}`);
         return res.redirect('/login?error=Sesion%20cerrada%20por%20seguridad');
     }
 };
-*/
+
+
+
+
+
+
+export default {
+    validadorTOKEN
+}
+
+
 
 
 
