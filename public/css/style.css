@@ -52,13 +52,38 @@ h2 {
 .heading_container h2 {
   position: relative;
   margin-bottom: 0;
-  font-size: 6.5rem;
+  font-size: 6.5rem; /* Tamaño de fuente por defecto */
   font-weight: bold;
   color: #e69c00;
 }
 
 .heading_container h2 span {
   color: #ffbe33;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1200px) {
+  .heading_container h2 {
+    font-size: 5rem; /* Ajuste para pantallas grandes */
+  }
+}
+
+@media (max-width: 992px) {
+  .heading_container h2 {
+    font-size: 4rem; /* Ajuste para pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .heading_container h2 {
+    font-size: 3rem; /* Ajuste para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 576px) {
+  .heading_container h2 {
+    font-size: 2.5rem; /* Ajuste para pantallas extra pequeñas */
+  }
 }
 
 .heading_container p {

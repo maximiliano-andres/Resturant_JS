@@ -111,15 +111,16 @@ const Login = async (req, res) => {
 
         // Verificar si el usuario existe
         if (!user) {
-            return res.status(401).json({ message: 'Email o contraseña incorrectos' })
-            
+            const error = 'Email o contraseña incorrectos'
+            return res.status(200).redirect("/login?error=" + encodeURIComponent(error));
         }
 
         // Verificar contraseña
         const isPasswordValid = await bcrypt.compare(password1, user.password);
         if (!isPasswordValid) {
-            return res.status(401).json({ message: 'Email o contraseña incorrectos' });
-           
+            const error = 'Email o contraseña invalidos'
+            return res.status(200).redirect("/login?error=" + encodeURIComponent(error));
+
         }
 
         //-------------------------TOKEN-----------------------------------------
