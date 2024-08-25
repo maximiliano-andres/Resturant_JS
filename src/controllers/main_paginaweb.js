@@ -26,7 +26,6 @@ const about = (req, res) => {
     res.render("about", { user: user });
 };
 
-const jocelyn = "nada"
 
 export default {
     home,
